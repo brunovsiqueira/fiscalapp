@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1030176798731",
+    "firebase_url": "https://fiscalapp-fcd5d.firebaseio.com",
+    "project_id": "fiscalapp-fcd5d",
+    "storage_bucket": "fiscalapp-fcd5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030176798731:android:fcf4e3e6a48f49ab",
+        "android_client_info": {
+          "package_name": "br.com.infracea.fiscalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030176798731-m8aq4mirs8v24anf2jkecs5cmitrk64v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.infracea.fiscalapp",
+            "certificate_hash": "5a74d0a4ba38d0c2cc02aa377ccc6032e6c57010"
+          }
+        },
+        {
+          "client_id": "1030176798731-i4278n8urbtqdle8r7jipcnakgktk2ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWaCRTpTB8DxTSPo71fkbH6Mejj_tf7as"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030176798731-i4278n8urbtqdle8r7jipcnakgktk2ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

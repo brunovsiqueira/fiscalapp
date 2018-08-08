@@ -38,6 +38,8 @@ public class ChatFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_chat, container, false);
 
+        dialogList.clear();
+
         findViewItems(view);
         setDummyData();
 
@@ -55,6 +57,7 @@ public class ChatFragment extends Fragment {
 
         return view;
     }
+
 
     public void findViewItems(View view) {
 

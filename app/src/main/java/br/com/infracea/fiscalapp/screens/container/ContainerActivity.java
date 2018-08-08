@@ -6,6 +6,13 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.firebase.ui.auth.AuthUI;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import java.util.Arrays;
 
 import br.com.infracea.fiscalapp.R;
 import br.com.infracea.fiscalapp.basic.BasicActivity;
@@ -15,12 +22,16 @@ import br.com.infracea.fiscalapp.screens.container.menu.MenuFragment;
 
 public class ContainerActivity extends BasicActivity {
 
+    private static final int RC_SIGN_IN = 123;
+
     private BottomNavigationView bottomNavigationView;
     private android.support.v4.app.FragmentManager fragmentManager;
 
     private ChatFragment chatFragment;
     private MapFragment mapFragment;
     private MenuFragment menuFragment;
+
+    private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +43,22 @@ public class ContainerActivity extends BasicActivity {
 
         findViewItems();
         loadFragment(chatFragment); //default fragment
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //attach firebase listener
+//        firebaseAuth.addAuthStateListener(authStateListener);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //detach firebase listener
+//        if (authStateListener != null) {
+//            firebaseAuth.removeAuthStateListener(authStateListener);
+//        }
     }
 
     private void findViewItems() {
@@ -88,5 +115,31 @@ public class ContainerActivity extends BasicActivity {
 
         return false;
     }
+
+    FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
+        @Override
+        public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+            FirebaseUser user = firebaseAuth.getCurrentUser();
+
+            if (user != null) {
+                //user is signed in, proceed
+                Toast.makeText(getBaseContext(), "You are signed in!", Toast.LENGTH_SHORT).show();
+                //onSignedInInitialize(user.getDisplayName());
+            } else {
+                //onSignedOutCleanup();
+                //user is signed out, show login screen
+                startActivityForResult(
+                        AuthUI.getInstance()
+                                .createSignInIntentBuilder()
+                                .setIsSmartLockEnabled(false)
+                                .setAvailableProviders(Arrays.asList(
+                                        new AuthUI.IdpConfig.GoogleBuilder().build(),
+                                        new AuthUI.IdpConfig.EmailBuilder().build()))
+                                .build(),
+                        RC_SIGN_IN);
+            }
+
+        }
+    };
 
 }

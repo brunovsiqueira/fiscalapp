@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient_blue_to_white"
-    >
+    android:background="@drawable/gradient_blue_to_red">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,11 +27,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
         android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/home_registered_button"
+            android:id="@+id/home_login_button"
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:layout_marginLeft="50dp"
@@ -41,6 +40,21 @@
             android:backgroundTint="@color/white"
             android:text="FAZER LOGIN"
             android:textAllCaps="false"
+            android:textSize="17.1sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/home_register_button"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rounded_button_colored"
+            android:backgroundTint="@color/white"
+            android:text="CRIAR UMA CONTA"
+            android:textAllCaps="false"
+            android:layout_marginTop="16dp"
             android:textSize="17.1sp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/black" />

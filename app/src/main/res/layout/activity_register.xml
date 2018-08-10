@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_container"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/register_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NOME"
+            android:textSize="15.9sp"
+            android:textColor="@color/text_gray"
+            android:fontFamily="sans-serif-medium"
+            android:textColorHint="@color/light_gray"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/register_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="EMAIL"
+            android:textSize="15.9sp"
+            android:textColor="@color/text_gray"
+            android:fontFamily="sans-serif-medium"
+            android:textColorHint="@color/light_gray"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/register_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CPF"
+            android:textSize="15.9sp"
+            android:textColor="@color/text_gray"
+            android:fontFamily="sans-serif-medium"
+            android:textColorHint="@color/light_gray"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CELULAR"
+            android:textSize="15.9sp"
+            android:textColor="@color/text_gray"
+            android:fontFamily="sans-serif-medium"
+            android:textColorHint="@color/light_gray"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data de nascimento"
+            android:layout_marginTop="20.1dp"
+            android:textSize="16sp"
+            android:textColor="#515151"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            android:id="@+id/register_data_picker"
+            android:layout_width="120dp"
+            android:layout_height="24dp"
+            android:text=" Escolher data "
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textColor="@color/text_gray"
+            android:background="@drawable/rounded_bordered_edittext"
+            android:backgroundTint="@color/light_gray"
+            android:fontFamily="sans-serif-light"/>
+    </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/register_send"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_button_colored"
+        android:layout_marginRight="38dp"
+        android:layout_marginLeft="38dp"
+        android:text="REGISTRAR-SE"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textSize="17.1sp"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>

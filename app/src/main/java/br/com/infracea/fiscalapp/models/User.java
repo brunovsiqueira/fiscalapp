@@ -7,6 +7,7 @@ public class User {
     private String email;
     private String phone;
     private String birthDate;
+    private String id;
 
     public static User userObj;
 
@@ -55,5 +56,13 @@ public class User {
 
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

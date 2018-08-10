@@ -10,7 +10,7 @@ public abstract class Mask {
 
     public enum MaskType {
 
-        CEP("#####-###"), PHONE("(##) ######-####"), CARD_NUMBER("#### #### #### ####"), CPF("###.###.###-##"), PASSPORT("######.#######.###-#######"), CARD_DATE("##/##"), DEFAULT("#####################");
+        CEP("#####-###"), PHONE("(##) #####-####"), CARD_NUMBER("#### #### #### ####"), CPF("###.###.###-##"), PASSPORT("######.#######.###-#######"), CARD_DATE("##/##"), DEFAULT("#####################");
 
         String mask;
 

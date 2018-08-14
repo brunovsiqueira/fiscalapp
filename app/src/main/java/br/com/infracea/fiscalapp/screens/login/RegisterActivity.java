@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -72,6 +73,24 @@ public class RegisterActivity extends BasicActivity {
 
         datePickerDialog = new DatePickerDialog(RegisterActivity.this, dateSetListener, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH));
         findViewItems();
+
+        DatabaseReference connectedRef = FirebaseDatabase.getInstance().getReference(".info/connected");
+        connectedRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                boolean connected = snapshot.getValue(Boolean.class);
+                if (connected) {
+                    Log.d("REGISTER", "USER CONNECTED");
+                } else {
+                    Log.d("REGISTER", "USER DESCONNECTED");
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.d("REGISTER", "LISTENER CANCELED");
+            }
+        });
 
     }
 
@@ -174,44 +193,7 @@ public class RegisterActivity extends BasicActivity {
         user.setEmail(userEmail.getText().toString());
         user.setName(userName.getText().toString());
         user.setPhone(userPhone.getText().toString());
-        user.setId(user.getId());
-    }
-
-    private void checkIfUserAlreadyExists () {
-        final String userId = firebaseAuth.getCurrentUser().getUid();
-        usersReference.child(userId).addListenerForSingleValueEvent(
-                new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        // Get user value
-                        if(!dataSnapshot.exists()) {
-                            //user doesnt exists, create user
-                            usersReference.child(userId).push().setValue(newUserMap());
-                        } else {
-                            Log.w("REGISTER", "USER EXISTS");
-                            //user already exists, update User
-                            //User.getInstance().setNewCurrentUser(dataSnapshot);
-                            //usersReference.child(userId).updateChildren(updateUserMap(User.getInstance()));
-                        }
-
-
-
-//                        if (ActivityCompat.checkSelfPermission(RegisterActivity.this,
-//                                android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-//
-//                            Intent intentToContainer = new Intent(LoginActivity.this, ContainerActivity.class);
-//                            startActivity(intentToContainer);
-//                        } else {
-//                            startActivity(new Intent(RegisterActivity.this, RequestPermissionActivity.class));
-//                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        Log.w("REGISTER", "getUser:onCancelled", databaseError.toException());
-                        // ...
-                    }
-                });
+        user.setId(FirebaseAuth.getInstance().getUid());
     }
 
 
@@ -230,11 +212,23 @@ public class RegisterActivity extends BasicActivity {
                             //checkIfUserAlreadyExists();
                             final String userId = firebaseAuth.getCurrentUser().getUid();
 //                            usersReference.push().child(userId).setValue(newUserMap());
-                            usersReference.push().setValue(user); //TEM QUE DAR UM PUSH porra
-                            Toast.makeText(RegisterActivity.this, "Usuário cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(RegisterActivity.this, ContainerActivity.class));
-                            finish();
+                            usersReference.child(userId).setValue(newUserMap()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(RegisterActivity.this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(RegisterActivity.this, ContainerActivity.class));
+                                        finish();
+                                    }  else {
+                                        Toast.makeText(RegisterActivity.this, "Erro no servidor", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                    progressBar.setVisibility(View.GONE);
+                                }
+                            }); //TEM QUE DAR UM PUSH porra
+
                         } else {
+                            progressBar.setVisibility(View.GONE);
                             try
                             {
                                 throw task.getException();
@@ -259,7 +253,7 @@ public class RegisterActivity extends BasicActivity {
                             }
                         }
 
-                        progressBar.setVisibility(View.GONE);
+
                     }
                 });
             }

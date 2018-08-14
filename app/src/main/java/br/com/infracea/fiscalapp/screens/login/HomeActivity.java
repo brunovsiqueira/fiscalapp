@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import br.com.infracea.fiscalapp.R;
 import br.com.infracea.fiscalapp.basic.BasicActivity;
+import br.com.infracea.fiscalapp.screens.container.ContainerActivity;
 
 public class HomeActivity extends BasicActivity {
 
@@ -41,7 +42,7 @@ public class HomeActivity extends BasicActivity {
     protected void onResume() {
         super.onResume();
 
-//        firebaseAuth.addAuthStateListener(authStateListener);
+        firebaseAuth.addAuthStateListener(authStateListener);
 
     }
 
@@ -49,9 +50,8 @@ public class HomeActivity extends BasicActivity {
     protected void onPause() {
         super.onPause();
 
-//        if (authStateListener != null) {
-//            firebaseAuth.removeAuthStateListener(authStateListener);
-//        }
+        firebaseAuth.removeAuthStateListener(authStateListener);
+
     }
 
     private void findViewItems() {
@@ -73,7 +73,9 @@ public class HomeActivity extends BasicActivity {
             if (user != null) {
                 //user is signed in, proceed
                 //INTENT TO CONTAINER
-                Toast.makeText(getBaseContext(), "You are signed in!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(HomeActivity.this, ContainerActivity.class));
+                finish();
+                Toast.makeText(HomeActivity.this, "Login efetuado", Toast.LENGTH_SHORT).show();
                 //onSignedInInitialize(user.getDisplayName());
             } else {
                 //onSignedOutCleanup();

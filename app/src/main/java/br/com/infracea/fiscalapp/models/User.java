@@ -11,6 +11,10 @@ public class User {
 
     public static User userObj;
 
+    public User() {
+        // Default constructor required for calls to DataSnapshot.getValue(User.class)
+    }
+
     public static User getInstance () {
         if (userObj == null) {
             userObj = new User();

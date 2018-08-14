@@ -42,7 +42,7 @@ public class ContainerActivity extends BasicActivity {
         addFragments();
 
         findViewItems();
-        loadFragment(chatFragment); //default fragment
+        loadFragment(menuFragment); //default fragment
     }
 
     @Override
@@ -115,31 +115,5 @@ public class ContainerActivity extends BasicActivity {
 
         return false;
     }
-
-    FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
-        @Override
-        public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-            FirebaseUser user = firebaseAuth.getCurrentUser();
-
-            if (user != null) {
-                //user is signed in, proceed
-                Toast.makeText(getBaseContext(), "You are signed in!", Toast.LENGTH_SHORT).show();
-                //onSignedInInitialize(user.getDisplayName());
-            } else {
-                //onSignedOutCleanup();
-                //user is signed out, show login screen
-                startActivityForResult(
-                        AuthUI.getInstance()
-                                .createSignInIntentBuilder()
-                                .setIsSmartLockEnabled(false)
-                                .setAvailableProviders(Arrays.asList(
-                                        new AuthUI.IdpConfig.GoogleBuilder().build(),
-                                        new AuthUI.IdpConfig.EmailBuilder().build()))
-                                .build(),
-                        RC_SIGN_IN);
-            }
-
-        }
-    };
 
 }

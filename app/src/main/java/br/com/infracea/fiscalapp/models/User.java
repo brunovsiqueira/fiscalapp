@@ -1,13 +1,16 @@
 package br.com.infracea.fiscalapp.models;
 
+import com.google.firebase.database.DataSnapshot;
+
 public class User {
 
+    private String id;
     private String name;
     private String cpf;
     private String email;
     private String phone;
     private String birthDate;
-    private String id;
+
 
     public static User userObj;
 
@@ -20,6 +23,14 @@ public class User {
             userObj = new User();
         }
         return userObj;
+    }
+
+    public void setNewCurrentUser(DataSnapshot snapshot) {
+        name = snapshot.child("name").toString();
+        id = snapshot.child("id").toString();
+        cpf = snapshot.child("cpf").toString();
+        email = snapshot.child("email").toString();
+        phone = snapshot.child("phone").toString();
     }
 
     public String getName() {

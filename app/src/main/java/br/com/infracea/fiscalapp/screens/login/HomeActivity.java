@@ -1,7 +1,9 @@
 package br.com.infracea.fiscalapp.screens.login;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -70,12 +72,16 @@ public class HomeActivity extends BasicActivity {
         public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
             FirebaseUser user = firebaseAuth.getCurrentUser();
 
-            if (user != null) {
+            SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("fiscalapp", MODE_PRIVATE);
+            boolean login = sharedPref.getBoolean("LOGIN", false);
+
+            if (user != null && !login) {
                 //user is signed in, proceed
                 //INTENT TO CONTAINER
-                startActivity(new Intent(HomeActivity.this, ContainerActivity.class));
-                finish();
-                Toast.makeText(HomeActivity.this, "Login efetuado", Toast.LENGTH_SHORT).show();
+                Intent intentToContainer = new Intent(HomeActivity.this, ContainerActivity.class);
+                intentToContainer.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intentToContainer);
+                Toast.makeText(HomeActivity.this, "Usuário logado", Toast.LENGTH_SHORT).show();
                 //onSignedInInitialize(user.getDisplayName());
             } else {
                 //onSignedOutCleanup();

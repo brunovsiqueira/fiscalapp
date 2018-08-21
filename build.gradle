@@ -21,7 +21,12 @@ allprojects {
         jcenter()
         mavenLocal()
         google()
+        // Additonal entries required for Chat SDK
+        maven { url "http://dl.bintray.com/chat-sdk/chat-sdk-android" }
+        maven { url "https://jitpack.io" }
+
     }
+
 }
 
 task clean(type: Delete) {

@@ -45,12 +45,19 @@ dependencies {
     // FirebaseUI for Firebase Realtime Database
     implementation 'com.firebaseui:firebase-ui-database:4.1.0'
     implementation 'com.firebaseui:firebase-ui-auth:4.1.0'
-    implementation 'com.google.firebase:firebase-storage:15.0.0'
+    implementation 'com.google.firebase:firebase-storage:16.0.1'
     implementation 'com.github.stfalcon:chatkit:0.3.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
 
     // Displaying images
     implementation 'com.github.bumptech.glide:glide:3.6.1'
+
+    //Chat SDK
+//    implementation 'co.chatsdk.chatsdk:chat-sdk-core:4.1.17'
+//    implementation 'co.chatsdk.chatsdk:chat-sdk-ui:4.1.17'
+//    implementation 'co.chatsdk.chatsdk:chat-sdk-firebase-adapter:4.1.17'
+//    implementation 'co.chatsdk.chatsdk:chat-sdk-firebase-file-storage:4.1.17'
 
 }
 

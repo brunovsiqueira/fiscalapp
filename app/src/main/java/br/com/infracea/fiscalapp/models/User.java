@@ -10,6 +10,8 @@ public class User {
     private String email;
     private String phone;
     private String birthDate;
+    private double latitude;
+    private double longitude;
 
 
     public static User userObj;
@@ -26,11 +28,11 @@ public class User {
     }
 
     public void setNewCurrentUser(DataSnapshot snapshot) {
-        name = snapshot.child("name").toString();
-        id = snapshot.child("id").toString();
-        cpf = snapshot.child("cpf").toString();
-        email = snapshot.child("email").toString();
-        phone = snapshot.child("phone").toString();
+        name = snapshot.child("name").getValue().toString();
+        id = snapshot.child("id").getValue().toString();
+        cpf = snapshot.child("cpf").getValue().toString();
+        email = snapshot.child("email").getValue().toString();
+        phone = snapshot.child("phone").getValue().toString();
     }
 
     public String getName() {
@@ -79,5 +81,21 @@ public class User {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 }

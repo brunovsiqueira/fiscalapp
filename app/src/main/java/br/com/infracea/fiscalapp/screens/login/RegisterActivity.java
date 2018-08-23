@@ -2,11 +2,9 @@ package br.com.infracea.fiscalapp.screens.login;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +21,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,8 +37,8 @@ import br.com.infracea.fiscalapp.R;
 import br.com.infracea.fiscalapp.basic.BasicActivity;
 import br.com.infracea.fiscalapp.models.User;
 import br.com.infracea.fiscalapp.screens.container.ContainerActivity;
-import br.com.infracea.fiscalapp.util.FormattterString;
-import br.com.infracea.fiscalapp.util.Mask;
+import br.com.infracea.fiscalapp.util.helpers.FormattterString;
+import br.com.infracea.fiscalapp.util.helpers.Mask;
 
 public class RegisterActivity extends BasicActivity {
 

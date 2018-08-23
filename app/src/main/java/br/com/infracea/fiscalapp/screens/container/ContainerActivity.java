@@ -1,9 +1,13 @@
 package br.com.infracea.fiscalapp.screens.container;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +16,9 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -30,6 +37,8 @@ import br.com.infracea.fiscalapp.screens.container.map.MapFragment;
 import br.com.infracea.fiscalapp.screens.container.menu.MenuFragment;
 import br.com.infracea.fiscalapp.screens.login.HomeActivity;
 import br.com.infracea.fiscalapp.screens.login.LoginActivity;
+import br.com.infracea.fiscalapp.util.GPS.GPSLocation;
+import br.com.infracea.fiscalapp.util.GPS.LocationService;
 
 public class ContainerActivity extends BasicActivity {
 
@@ -42,16 +51,33 @@ public class ContainerActivity extends BasicActivity {
     private MapFragment mapFragment;
     private MenuFragment menuFragment;
 
+    private GPSLocation myLocManager;
+
     private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     private DatabaseReference usersReference = FirebaseDatabase.getInstance().getReference().child("users");
+
+    private FusedLocationProviderClient mFusedLocationClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
 
+//        myLocManager = new GPSLocation(ContainerActivity.this);
+
         instantiateFragments();
         addFragments();
+
+        if (ActivityCompat.checkSelfPermission(this,
+                android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+            startService(new Intent(this, LocationService.class));
+        } else {
+            requestPermission();
+        }
+
+//        myLocManager = new GPSLocation(ContainerActivity.this);
+//        myLocManager.mGoogleApiClient.connect();
 
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
             getUserInfoFromFirebase();
@@ -66,6 +92,8 @@ public class ContainerActivity extends BasicActivity {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putBoolean("LOGIN", false);
         editor.commit();
+
+//        myLocManager.mGoogleApiClient.connect();
     }
 
     @Override
@@ -76,8 +104,15 @@ public class ContainerActivity extends BasicActivity {
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+//x
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
+
         //detach firebase listener
 //        if (authStateListener != null) {
 //            firebaseAuth.removeAuthStateListener(authStateListener);
@@ -90,6 +125,36 @@ public class ContainerActivity extends BasicActivity {
 
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         //bottomNavigationView.
+    }
+
+    public void locationUpdated(Location location) {
+        Log.d("CONTAINER", "Camera Moved New Location: " + location.toString());
+        if (mapFragment.lastUserLocation != null) {
+            mapFragment.lastUserLocation = location;
+        } else {
+            mapFragment.lastUserLocation = location;
+            mapFragment.moveCamera(location);
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        //verificar se deu ou nao a permissao, se deu, passa de tela
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 1) {
+            if (ActivityCompat.checkSelfPermission(this,
+                    android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                this.startService(new Intent(this, LocationService.class));
+            } else {
+                Toast.makeText(this, "É necessário aceitar a permissão de localização!", Toast.LENGTH_LONG).show();
+                requestPermission();
+            }
+        }
+    }
+
+    private void requestPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 1);
     }
 
     private void getUserInfoFromFirebase() {
@@ -132,6 +197,7 @@ public class ContainerActivity extends BasicActivity {
     private void addFragments() {
         fragmentManager = getSupportFragmentManager();
     }
+
 
     BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override

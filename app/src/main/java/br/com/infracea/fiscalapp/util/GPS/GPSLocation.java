@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -34,7 +35,7 @@ public class GPSLocation implements GoogleApiClient.ConnectionCallbacks, GoogleA
     Context context = null;
     public GoogleApiClient mGoogleApiClient = null;
     private Location mLastLocation;
-    private boolean mRequestingLocationUpdates = false;
+    public boolean mRequestingLocationUpdates = false;
     private LocationRequest mLocationRequest;
     private Location mCurrentLocation;
     private String[] permissions = new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION};;
@@ -59,7 +60,7 @@ public class GPSLocation implements GoogleApiClient.ConnectionCallbacks, GoogleA
         }
     }
 
-    private void startLocationUpdates() {
+    public void startLocationUpdates() {
         if (ActivityCompat.checkSelfPermission(
                 context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(
@@ -70,9 +71,9 @@ public class GPSLocation implements GoogleApiClient.ConnectionCallbacks, GoogleA
         mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(10000);
         mLocationRequest.setFastestInterval(5000);
-        mLocationRequest.setPriority(PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         mFusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, null);
-        mRequestingLocationUpdates = false;;
+        mRequestingLocationUpdates = false;
     }
 
     public void stopLocationUpdates() {

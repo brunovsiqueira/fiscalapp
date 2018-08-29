@@ -24,6 +24,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import br.com.infracea.fiscalapp.R;
@@ -40,6 +41,7 @@ public class MapFragment extends Fragment {
     private GoogleMap googleMap;
     private MarkerOptions mp = new MarkerOptions();
     private boolean markerAdded = false;
+    private Marker m;
 
     public Location lastUserLocation;
 
@@ -53,6 +55,7 @@ public class MapFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (googleMap != null && lastUserLocation != null) {
+                    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lastUserLocation.getLatitude(), lastUserLocation.getLongitude()), 14.0f));
                     moveCamera(lastUserLocation);
                 }
             }
@@ -86,6 +89,7 @@ public class MapFragment extends Fragment {
             @Override
             public void run() {
                 if (googleMap != null && lastUserLocation != null) {
+                    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lastUserLocation.getLatitude(), lastUserLocation.getLongitude()), 14.0f));
                     moveCamera(lastUserLocation);
                     pd.dismiss();
                 }
@@ -112,20 +116,23 @@ public class MapFragment extends Fragment {
 
     public void moveCamera(Location mLastLocation) {
         try {
-            //googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude())));
-//            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom( new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()) , 14.0f ));
-
-            mp.position(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()));
 
             if (!markerAdded) {
-                mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
-                mp.title("my position");
-                googleMap.addMarker(mp);
+                mp.position(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()));
+                //mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+                mp.title("Minha posição");
+                //googleMap.addMarker(mp);
+                m = googleMap.addMarker(mp);
                 markerAdded = true;
             }
 
 
-            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()), 14.0f));
+            m.setPosition(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()));
+
+            //mp.position(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()));
+
+
+
         } catch (NullPointerException e) {
             //nada-faz
         }

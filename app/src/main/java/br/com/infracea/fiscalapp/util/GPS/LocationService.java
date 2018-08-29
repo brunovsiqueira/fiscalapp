@@ -12,6 +12,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.ResultReceiver;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.firebase.geofire.GeoFire;
@@ -42,7 +43,6 @@ public class LocationService extends Service {
         super.onStartCommand(intent, flags, startId);
         return START_STICKY;
     }
-    
 
     private class LocationListener implements android.location.LocationListener {
         Location mLastLocation;
@@ -56,6 +56,7 @@ public class LocationService extends Service {
         public void onLocationChanged(Location location) {
             Log.d(TAG, "onLocationChanged: " + location);
             mLastLocation.set(location);
+            boolean foreground = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getBoolean("foreground", false);
 
 
 
@@ -75,6 +76,7 @@ public class LocationService extends Service {
                     resultReceiver.send(1, bundle);
                 }*/
             }
+
 
         }
 

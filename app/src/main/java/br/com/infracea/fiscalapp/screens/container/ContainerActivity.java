@@ -98,6 +98,9 @@ public class ContainerActivity extends BasicActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        if (myLocManager != null) {
+            myLocManager.startLocationUpdates();
+        }
         //attach firebase listener
 //        firebaseAuth.addAuthStateListener(authStateListener);
     }
@@ -105,17 +108,16 @@ public class ContainerActivity extends BasicActivity {
     @Override
     protected void onStop() {
         super.onStop();
-//x
+
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        //detach firebase listener
-//        if (authStateListener != null) {
-//            firebaseAuth.removeAuthStateListener(authStateListener);
-//        }
+        if (myLocManager != null) {
+            myLocManager.stopLocationUpdates();
+        }
     }
 
     private void findViewItems() {
@@ -127,13 +129,15 @@ public class ContainerActivity extends BasicActivity {
     }
 
     public void locationUpdated(Location location) {
-        Log.d("CONTAINER", "Camera Moved New Location: " + location.toString());
-        if (mapFragment.lastUserLocation != null) {
-            mapFragment.lastUserLocation = location;
-        } else {
-            mapFragment.lastUserLocation = location;
-            mapFragment.moveCamera(location);
-        }
+//        Log.d("CONTAINER", "Camera Moved New Location: " + location.toString());
+//        if (mapFragment.lastUserLocation != null) {
+//            mapFragment.lastUserLocation = location;
+//        } else {
+//            mapFragment.lastUserLocation = location;
+//            mapFragment.moveCamera(location);
+//        }
+        mapFragment.lastUserLocation = location;
+        mapFragment.moveCamera(location);
 
     }
 

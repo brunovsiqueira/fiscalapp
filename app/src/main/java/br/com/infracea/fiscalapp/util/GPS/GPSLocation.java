@@ -18,6 +18,7 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import br.com.infracea.fiscalapp.basic.BasicActivity;
 import br.com.infracea.fiscalapp.screens.container.ContainerActivity;
@@ -90,13 +91,18 @@ public class GPSLocation implements GoogleApiClient.ConnectionCallbacks, GoogleA
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        mLastLocation = mFusedLocationClient.getLastLocation().getResult();
-        if (mLastLocation != null) {
-            //mLatitudeText.setText(String.valueOf(mLastLocation.getLatitude()));
-            //mLongitudeText.setText(String.valueOf(mLastLocation.getLongitude()));
-            //check.moveCamera(mLastLocation);
-            activity.locationUpdated(mLastLocation);
-        }
+        mFusedLocationClient.getLastLocation()
+                .addOnSuccessListener(activity, new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        // Got last known location. In some rare situations this can be null.
+                        if (location != null) {
+                            // Logic to handle location object
+                            mLastLocation = location;
+                            activity.locationUpdated(mLastLocation);
+                        }
+                    }
+                });
 
         if (!mRequestingLocationUpdates) {
             mRequestingLocationUpdates = true;

@@ -1,5 +1,6 @@
 package br.com.infracea.fiscalapp.screens.container.map;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -20,6 +22,7 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -33,7 +36,10 @@ public class MapFragment extends Fragment {
     View view;
     private SupportMapFragment mapFragment;
     private MapView mapView;
+    private FloatingActionButton floatingActionButton;
     private GoogleMap googleMap;
+    private MarkerOptions mp = new MarkerOptions();
+    private boolean markerAdded = false;
 
     public Location lastUserLocation;
 
@@ -41,6 +47,16 @@ public class MapFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_map, container, false);
+
+        floatingActionButton =  view.findViewById(R.id.frag_map_userlocation_button);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (googleMap != null && lastUserLocation != null) {
+                    moveCamera(lastUserLocation);
+                }
+            }
+        });
 
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());
@@ -62,15 +78,19 @@ public class MapFragment extends Fragment {
     }
 
     private void moveCameraToUserLocation() {
+        final ProgressDialog pd = new ProgressDialog(getContext());
+        pd.setMessage("Atualizando sua localização");
+        pd.show();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 if (googleMap != null && lastUserLocation != null) {
                     moveCamera(lastUserLocation);
+                    pd.dismiss();
                 }
             }
-        }, 3000);
+        }, 2000);
     }
 
     OnMapReadyCallback onMapReady = new OnMapReadyCallback() {
@@ -93,7 +113,19 @@ public class MapFragment extends Fragment {
     public void moveCamera(Location mLastLocation) {
         try {
             //googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude())));
-            CameraUpdateFactory.newLatLngZoom( new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()) , 14.0f );
+//            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom( new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()) , 14.0f ));
+
+            mp.position(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()));
+
+            if (!markerAdded) {
+                mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+                mp.title("my position");
+                googleMap.addMarker(mp);
+                markerAdded = true;
+            }
+
+
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()), 14.0f));
         } catch (NullPointerException e) {
             //nada-faz
         }

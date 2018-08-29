@@ -63,7 +63,8 @@ public class ContainerActivity extends BasicActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
 
-//        myLocManager = new GPSLocation(ContainerActivity.this);
+        myLocManager = new GPSLocation(ContainerActivity.this);
+        myLocManager.mGoogleApiClient.connect();
 
         instantiateFragments();
         addFragments();
@@ -76,8 +77,6 @@ public class ContainerActivity extends BasicActivity {
             requestPermission();
         }
 
-//        myLocManager = new GPSLocation(ContainerActivity.this);
-//        myLocManager.mGoogleApiClient.connect();
 
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
             getUserInfoFromFirebase();

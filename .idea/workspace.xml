@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b02929-74d3-46e6-ae85-51dc23fa1f6d" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/models/Person.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
@@ -22,8 +23,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/ContainerActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/ContainerActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/map/MapFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/map/MapFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_container.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_container.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,44 +45,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MapFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MapFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/map/MapFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="139" column="43" lean-forward="true" selection-start-line="139" selection-start-column="43" selection-end-line="139" selection-end-column="43" />
-              <folding>
-                <element signature="e#2138#2430#0" expanded="true" />
-                <element signature="e#2429#2430#0" expanded="true" />
-                <element signature="e#3320#3621#0" expanded="true" />
-                <element signature="e#3620#3621#0" expanded="true" />
-                <element signature="e#3864#4829#0" expanded="true" />
-                <element signature="e#4828#4829#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="295">
+              <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/login/LoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="813">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="fragment_map.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="android-designer2">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+              <folding>
+                <marker date="1535725911336" expanded="true" signature="827:994" ph="..." />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="GPSLocation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/util/GPS/GPSLocation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="132" column="42" lean-forward="true" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
+            <state relative-caret-position="173">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
-                <element signature="e#4156#4678#0" expanded="true" />
-                <element signature="e#4677#4678#0" expanded="true" />
+                <element signature="e#5244#5705#0" expanded="true" />
                 <element signature="e#5704#5705#0" expanded="true" />
               </folding>
             </state>
@@ -93,37 +96,101 @@
       <file leaf-file-name="ContainerActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/ContainerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="127" column="10" lean-forward="false" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
+            <state relative-caret-position="373">
+              <caret line="140" column="18" lean-forward="false" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6774#6775#0" expanded="true" />
-                <element signature="e#6835#6836#0" expanded="true" />
-                <element signature="e#6930#8164#0" expanded="true" />
-                <element signature="e#8163#8164#0" expanded="true" />
+                <element signature="e#6776#6777#0" expanded="true" />
+                <element signature="e#6837#6838#0" expanded="true" />
+                <element signature="e#6932#8166#0" expanded="true" />
+                <element signature="e#8165#8166#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Toast.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-27/android.jar!/android/widget/Toast.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="71" column="84" lean-forward="false" selection-start-line="71" selection-start-column="84" selection-end-line="71" selection-end-column="84" />
+              <folding>
+                <marker date="1532450863783" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1532450863783" expanded="false" signature="138:244" ph="..." />
+                <marker date="1532450863783" expanded="false" signature="392:403" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="439:445" ph=" }" />
+                <marker date="1532450863783" expanded="false" signature="469:480" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="516:522" ph=" }" />
+                <marker date="1532450863783" expanded="false" signature="548:559" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="595:601" ph=" }" />
+                <marker date="1532450863783" expanded="false" signature="637:648" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="684:690" ph=" }" />
+                <marker date="1532450863783" expanded="false" signature="717:728" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="764:770" ph=" }" />
+                <marker date="1532450863783" expanded="false" signature="813:824" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="860:866" ph=" }" />
+                <marker date="1532450863783" expanded="false" signature="896:907" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="943:949" ph=" }" />
+                <marker date="1532450863783" expanded="true" signature="1023:1075" ph="{...}" />
+                <marker date="1532450863783" expanded="false" signature="1115:1126" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="1162:1168" ph=" }" />
+                <marker date="1532450863783" expanded="false" signature="1206:1217" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="1253:1259" ph=" }" />
+                <marker date="1532450863783" expanded="true" signature="1327:1379" ph="{...}" />
+                <marker date="1532450863783" expanded="false" signature="1408:1419" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="1455:1461" ph=" }" />
+                <marker date="1532450863783" expanded="false" signature="1490:1501" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="1537:1543" ph=" }" />
+                <marker date="1532450863783" expanded="false" signature="1572:1583" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="1619:1625" ph=" }" />
+                <marker date="1532450863783" expanded="true" signature="1710:1762" ph="{...}" />
+                <marker date="1532450863783" expanded="true" signature="1864:1916" ph="{...}" />
+                <marker date="1532450863783" expanded="false" signature="1952:1963" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="1999:2005" ph=" }" />
+                <marker date="1532450863783" expanded="false" signature="2046:2057" ph=" { " />
+                <marker date="1532450863783" expanded="false" signature="2093:2099" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/models/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="81" lean-forward="false" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/models/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="99" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="activity_container.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_container.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
         </entry>
       </file>
       <file leaf-file-name="LocationService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/util/GPS/LocationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="173">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2225,6 +2292,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_container.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/ContainerActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/map/MapFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/models/Person.java" />
       </list>
     </option>
   </component>
@@ -2250,9 +2318,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2276,18 +2341,7 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="fiscalapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FiscalApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="FiscalApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FiscalApp" type="1abcf292:AndroidViewProjectNode" />
@@ -2298,6 +2352,9 @@
         </subPane>
       </pane>
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2480,7 +2537,7 @@
     <frame x="1985" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2491,7 +2548,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51413614" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37172773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2505,11 +2562,35 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51413614" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17025982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2538,7 +2619,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/map/MapFragment.java</url>
-          <line>121</line>
+          <line>123</line>
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
@@ -2597,30 +2678,183 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/map/MapFragment.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/eca68ca30791426fc9de55259de2e9f0/jars/classes.jar!/com/google/android/gms/common/internal/GmsClientEventManager.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-          <folding>
-            <element signature="e#2138#2430#0" expanded="true" />
-            <element signature="e#2429#2430#0" expanded="true" />
-            <element signature="e#3320#3621#0" expanded="true" />
-            <element signature="e#3620#3621#0" expanded="true" />
-            <element signature="e#3864#4829#0" expanded="true" />
-            <element signature="e#4828#4829#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="182">
+          <caret line="55" column="56" lean-forward="false" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/login/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="83" column="65" lean-forward="true" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/util/GPS/LocationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_my_location_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-4.1.0.aar/15a470830d800f0d43565995aad396c0/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/basic/BasicActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="14" column="119" lean-forward="false" selection-start-line="14" selection-start-column="119" selection-end-line="14" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.firebase/geofire-common/2.3.1/acb7e7b93eb4563e69de5320818249364573dd64/geofire-common-2.3.1-sources.jar!/com/firebase/geofire/GeoLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="48" column="11" lean-forward="false" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.firebase/geofire-common/2.3.1/acb7e7b93eb4563e69de5320818249364573dd64/geofire-common-2.3.1-sources.jar!/com/firebase/geofire/GeoFire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="238" column="20" lean-forward="false" selection-start-line="238" selection-start-column="20" selection-end-line="238" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="99" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="99" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_container.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="162">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <marker date="1535725911336" expanded="true" signature="827:994" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/eca68ca30791426fc9de55259de2e9f0/jars/classes.jar!/com/google/android/gms/common/api/GoogleApiClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="432" column="13" lean-forward="false" selection-start-line="432" selection-start-column="13" selection-end-line="432" selection-end-column="13" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/util/GPS/GPSLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="e#5244#5705#0" expanded="true" />
+            <element signature="e#5704#5705#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/util/GPS/LocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/map/MapFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/login/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="813">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/ContainerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="193" column="30" lean-forward="true" selection-start-line="193" selection-start-column="30" selection-end-line="193" selection-end-column="30" />
+          <folding>
+            <element signature="e#6776#6777#0" expanded="true" />
+            <element signature="e#6837#6838#0" expanded="true" />
+            <element signature="e#6932#8166#0" expanded="true" />
+            <element signature="e#8165#8166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/map/MapFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml">
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <marker date="1535725911336" expanded="true" signature="827:994" ph="..." />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/util/GPS/GPSLocation.java">
@@ -2628,8 +2862,7 @@
         <state relative-caret-position="1242">
           <caret line="92" column="74" lean-forward="false" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
           <folding>
-            <element signature="e#4156#4678#0" expanded="true" />
-            <element signature="e#4677#4678#0" expanded="true" />
+            <element signature="e#5244#5705#0" expanded="true" />
             <element signature="e#5704#5705#0" expanded="true" />
           </folding>
         </state>
@@ -2647,10 +2880,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#1704#1705#0" expanded="false" />
-            <element signature="e#1729#1730#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2683,11 +2913,10 @@
         <state relative-caret-position="36">
           <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="67" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6774#6775#0" expanded="true" />
-            <element signature="e#6835#6836#0" expanded="true" />
-            <element signature="e#6930#8164#0" expanded="true" />
-            <element signature="e#8163#8164#0" expanded="true" />
+            <element signature="e#6776#6777#0" expanded="true" />
+            <element signature="e#6837#6838#0" expanded="true" />
+            <element signature="e#6932#8166#0" expanded="true" />
+            <element signature="e#8165#8166#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2741,43 +2970,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#1704#1705#0" expanded="false" />
-            <element signature="e#1729#1730#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/eca68ca30791426fc9de55259de2e9f0/jars/classes.jar!/com/google/android/gms/common/internal/GmsClientEventManager.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="55" column="56" lean-forward="false" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
-          <folding>
-            <marker date="1532371541922" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1532371541922" expanded="false" signature="162:678" ph="..." />
-            <marker date="1532371541922" expanded="true" signature="1374:1456" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="1499:1570" ph="{...}" />
-            <marker date="1532371541922" expanded="false" signature="1611:1622" ph=" { " />
-            <marker date="1532371541922" expanded="false" signature="1639:1645" ph=" }" />
-            <marker date="1532371541922" expanded="true" signature="1717:1872" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="1952:3081" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="3167:4171" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="4261:5176" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="5254:5885" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="5970:6143" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="6223:6731" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="6821:7330" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="7427:7600" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="7692:8132" ph="{...}" />
-            <marker date="1532371541922" expanded="true" signature="8187:8868" ph="{...}" />
-            <marker date="1532371541922" expanded="false" signature="8916:8927" ph=" { " />
-            <marker date="1532371541922" expanded="false" signature="8944:8950" ph=" }" />
-            <marker date="1532371541922" expanded="true" signature="9016:9091" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2809,7 +3005,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2817,7 +3012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2825,63 +3019,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="14" column="119" lean-forward="false" selection-start-line="14" selection-start-column="119" selection-end-line="14" selection-end-column="119" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_container.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <marker date="1535725911336" expanded="true" signature="827:994" ph="..." />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/util/GPS/LocationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="173">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/ContainerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="127" column="10" lean-forward="false" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6774#6775#0" expanded="true" />
-            <element signature="e#6835#6836#0" expanded="true" />
-            <element signature="e#6930#8164#0" expanded="true" />
-            <element signature="e#8163#8164#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/util/GPS/GPSLocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="132" column="42" lean-forward="true" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
+        <state relative-caret-position="173">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
-            <element signature="e#4156#4678#0" expanded="true" />
-            <element signature="e#4677#4678#0" expanded="true" />
+            <element signature="e#5244#5705#0" expanded="true" />
             <element signature="e#5704#5705#0" expanded="true" />
           </folding>
         </state>
@@ -2903,18 +3081,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-27/android.jar!/android/widget/Toast.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="71" column="84" lean-forward="false" selection-start-line="71" selection-start-column="84" selection-end-line="71" selection-end-column="84" />
+          <folding>
+            <marker date="1532450863783" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1532450863783" expanded="false" signature="138:244" ph="..." />
+            <marker date="1532450863783" expanded="false" signature="392:403" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="439:445" ph=" }" />
+            <marker date="1532450863783" expanded="false" signature="469:480" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="516:522" ph=" }" />
+            <marker date="1532450863783" expanded="false" signature="548:559" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="595:601" ph=" }" />
+            <marker date="1532450863783" expanded="false" signature="637:648" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="684:690" ph=" }" />
+            <marker date="1532450863783" expanded="false" signature="717:728" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="764:770" ph=" }" />
+            <marker date="1532450863783" expanded="false" signature="813:824" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="860:866" ph=" }" />
+            <marker date="1532450863783" expanded="false" signature="896:907" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="943:949" ph=" }" />
+            <marker date="1532450863783" expanded="true" signature="1023:1075" ph="{...}" />
+            <marker date="1532450863783" expanded="false" signature="1115:1126" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="1162:1168" ph=" }" />
+            <marker date="1532450863783" expanded="false" signature="1206:1217" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="1253:1259" ph=" }" />
+            <marker date="1532450863783" expanded="true" signature="1327:1379" ph="{...}" />
+            <marker date="1532450863783" expanded="false" signature="1408:1419" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="1455:1461" ph=" }" />
+            <marker date="1532450863783" expanded="false" signature="1490:1501" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="1537:1543" ph=" }" />
+            <marker date="1532450863783" expanded="false" signature="1572:1583" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="1619:1625" ph=" }" />
+            <marker date="1532450863783" expanded="true" signature="1710:1762" ph="{...}" />
+            <marker date="1532450863783" expanded="true" signature="1864:1916" ph="{...}" />
+            <marker date="1532450863783" expanded="false" signature="1952:1963" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="1999:2005" ph=" }" />
+            <marker date="1532450863783" expanded="false" signature="2046:2057" ph=" { " />
+            <marker date="1532450863783" expanded="false" signature="2093:2099" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/ContainerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="140" column="18" lean-forward="false" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
+          <folding>
+            <element signature="e#6776#6777#0" expanded="true" />
+            <element signature="e#6837#6838#0" expanded="true" />
+            <element signature="e#6932#8166#0" expanded="true" />
+            <element signature="e#8165#8166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/screens/container/map/MapFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="139" column="43" lean-forward="true" selection-start-line="139" selection-start-column="43" selection-end-line="139" selection-end-column="43" />
-          <folding>
-            <element signature="e#2138#2430#0" expanded="true" />
-            <element signature="e#2429#2430#0" expanded="true" />
-            <element signature="e#3320#3621#0" expanded="true" />
-            <element signature="e#3620#3621#0" expanded="true" />
-            <element signature="e#3864#4829#0" expanded="true" />
-            <element signature="e#4828#4829#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="295">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="99" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/infracea/fiscalapp/models/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="81" lean-forward="false" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -137,7 +137,7 @@ public class ContainerActivity extends BasicActivity {
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 this.startService(new Intent(this, LocationService.class));
             } else {
-                Toast.makeText(this, "É necessário aceitar a permissão de localização!", Toast.LENGTH_LONG).show();
+//                Toast.makeText(this, "É necessário aceitar a permissão de localização!", Toast.LENGTH_LONG).show();
                 requestPermission();
             }
         }

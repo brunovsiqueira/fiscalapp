@@ -13,6 +13,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
@@ -48,6 +49,7 @@ public class MapFragment extends Fragment {
     private MarkerOptions mp = new MarkerOptions();
     private boolean markerAdded = false;
     private Marker m;
+    private TextView toolbarTitle;
 
     public Location lastUserLocation;
     private GeoQuery geoQuery;
@@ -75,7 +77,9 @@ public class MapFragment extends Fragment {
         }
 
         mapView = view.findViewById(R.id.mapView);
+        toolbarTitle = view.findViewById(R.id.toolbar_container_title);
 
+        toolbarTitle.setText("Mapa de fiscais");
         mapView.onCreate(savedInstanceState);
         mapView.onResume();
         mapView.getMapAsync(onMapReady);
